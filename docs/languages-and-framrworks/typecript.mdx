@@ -1,0 +1,66 @@
+---
+sidebar_position: 0
+---
+
+import { Tag } from "antd";
+
+# TypeScript
+
+TypeScript is a statically typed superset of JavaScript that adds optional static typing to the language, enabling developers to catch errors early during development and improve code maintainability in React applications. It enhances productivity by providing features like type checking, interfaces, and advanced tooling support, making codebases more robust and easier to scale.
+
+### Best Practices
+
+1. **Type Annotations:**
+   <Tag color="volcano">Safety</Tag>  <Tag color="cyan"> Readability</Tag><br/>
+   Utilize type annotations wherever possible to provide clarity about the expected
+   types of variables, parameters, and return values.
+
+   ```typescript
+   let age: number = 25;
+   function greet(name: string): string {
+     return `Hello, ${name}`;
+   }
+   
+   
+2. **Strict Mode:**
+ <Tag color="volcano">Safety</Tag> <br/>
+    Enable TypeScripts strict mode (`strict` compiler option) to catch more potential errors at compiletime. Enable it in your `tsconfig.json`
+
+    ```json
+    {
+      "compilerOptions": {
+        "strict": true
+      }
+    }
+
+3. **Avoid `any` type :**
+ <Tag color="volcano">Safety</Tag>  <Tag color="cyan"> Readability</Tag><br/>
+    Minimize the use of the `any` type as much as possible. Using `any` defeats the purpose of TypeScript's type checking.
+    
+    ![](asserts/avoid-any-types.png)
+    
+4. **Interfaces Over Inline Types:**
+<Tag color="volcano">Safety</Tag> <br/>
+  Prefer defining interfaces or types over inline type annotations. This promotes reusability and readability.
+
+    ```typescript
+    interface User {
+      name: string;
+      age: number;
+    }
+    function getUserInfo(user: User): string {
+      return `${user.name} is ${user.age} years old.`;
+    }
+      
+5. **Use `readonly`:**
+<Tag color="volcano">Safety</Tag> <br/>
+  Use the `readonly` modifier for properties whenever possible to prevent accidental modification.
+
+   ```typescript
+    interface Point {
+      readonly x: number;
+      readonly y: number;
+    }
+    let point: Point = { x: 10, y: 20 };
+    point.x = 30; // Error: Cannot assign to 'x' because it is a readonly
+    property
