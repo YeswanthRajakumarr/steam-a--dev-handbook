@@ -50,6 +50,7 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {},
       } satisfies Preset.Options,
     ],
   ],
@@ -121,7 +122,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Steam a, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
