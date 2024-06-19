@@ -38,7 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/YeswanthRajakumarr/steam-a--dev-handbook/blob/main/docs/intro.md',
+            'https://github.com/YeswanthRajakumarr/steam-a--dev-handbook/blob/main',
         },
         blog: {
           showReadingTime: true,
