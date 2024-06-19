@@ -23,7 +23,7 @@ function HomepageHeader() {
               Get Started ⚡️
           </Link>
         </div>
-      </div>⚡️
+      </div>
     </header>
   );
 }
