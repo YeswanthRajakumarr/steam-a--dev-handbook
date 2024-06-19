@@ -21,23 +21,11 @@ TypeScript is a statically typed superset of JavaScript that adds optional stati
     }
     ```
 
-2.  **Strict Mode:**<Tag color="volcano">Safety</Tag> <br />
-    Enable TypeScripts strict mode (`strict` compiler option) to catch more
-    potential errors at compiletime. Enable it in your `tsconfig.json`
-
-    ```json
-    {
-      "compilerOptions": {
-        "strict": true
-      }
-    }
-    ```
-
-3.  **Avoid `any` type :**<Tag color="volcano">Safety</Tag> <Tag color="cyan"> Readability</Tag><br />
+2.  **Avoid `any` type :**<Tag color="volcano">Safety</Tag> <Tag color="cyan"> Readability</Tag><br />
     Minimize the use of the `any` type as much as possible. Using `any` defeats
     the purpose of TypeScript's type checking. ![](asserts/avoid-any-types.png)
 
-4.  **Interfaces Over Inline Types:**<Tag color="volcano">Safety</Tag> <br />
+3.  **Interfaces Over Inline Types:**<Tag color="volcano">Safety</Tag> <br />
     Prefer defining interfaces or types over inline type annotations. This
     promotes reusability and readability.
 
@@ -50,7 +38,7 @@ TypeScript is a statically typed superset of JavaScript that adds optional stati
           return `${user.name} is ${user.age} years old.`;
         }
 
-5.  **Use `readonly`:**<Tag color="volcano">Safety</Tag> <br />
+4.  **Use `readonly`:**<Tag color="volcano">Safety</Tag> <br />
 
     Use the `readonly` modifier for properties whenever possible to prevent
     accidental modification.
@@ -65,7 +53,7 @@ TypeScript is a statically typed superset of JavaScript that adds optional stati
     property;
     ```
 
-6.  **Consistent Naming Conventions:** <Tag color="cyan">Readability</Tag> <br />
+5.  **Consistent Naming Conventions:** <Tag color="cyan">Readability</Tag> <br />
 
     Follow consistent naming conventions for variables, functions, interfaces,
     and types. Use camelCase for variables and functions, and PascalCase for
@@ -80,7 +68,7 @@ TypeScript is a statically typed superset of JavaScript that adds optional stati
           // Implementation
         }```
 
-7.  **Use Enums:**
+6.  **Use Enums:**
 
     When you have a fixed set of values, consider using enums to represent them instead of magic strings or numbers.
 
@@ -94,7 +82,7 @@ enum Direction {
 let playerDirection: Direction = Direction.Right;
 ```
 
-8. **Avoid `null` and `undefined`:**
+7. **Avoid `null` and `undefined`:**
    <Tag color="volcano">Safety</Tag> <br />
    Whenever possible, avoid using `null` and `undefined`. Instead, use
    TypeScript's type system to represent nullable types explicitly using union
@@ -104,7 +92,7 @@ let playerDirection: Direction = Direction.Right;
 let username: string | null = getUsername(); // Allow null
 ```
 
-9. **Use Union and Intersection Types:**
+8. **Use Union and Intersection Types:**
    Take advantage of TypeScript's powerful type system by using union and intersection
    types to model complex data structures.
 
@@ -123,7 +111,7 @@ function getPetDetails(pet: Pet): string {
 }
 ```
 
-10. **Use `as` for Type Assertions:**
+9. **Use `as` for Type Assertions:**
     Use type assertions (`as` keyword) sparingly and only when necessary. Prefer type inference over explicit type annotations wherever possible.
 
 ```typescript
@@ -131,7 +119,7 @@ let userInput: unknown = getUserInput();
 let userName = (userInput as string).toUpperCase();
 ```
 
-11. **Avoid Type Assertion for Unknown Types:**
+10. **Avoid Type Assertion for Unknown Types:**
     If you're not sure about the type of a value, prefer using type guards (`typeof`, `instanceof`, etc.) over type assertions.
 
 ```typescript
@@ -140,7 +128,7 @@ if (typeof someValue === "string") {
 }
 ```
 
-12. **Use `readonly` Array Types:**
+11. **Use `readonly` Array Types:**
     Use `readonly` array types instead of `Array` or `[]` for arrays that should not be mutated.
 
 ```typescript
@@ -151,17 +139,32 @@ let numbers: readonly number[] = [1, 2, 3];
 numbers.push(4); // Error: Property 'push' does not exist on type 'readonly number[]'
 ```
 
-13. **Avoid `var`:**
+12. **Avoid `var`:**
 
 Prefer using `let` or `const` over `var` for variable declarations to leverage block scoping.
 
-14. **Use `noImplicitAny`:**
+### Ts Configs
+ Options to be enabled on tsconfig.json to catch issues at compie time
 
+1. **Use `noImplicitAny`:**
   Enforce explicit type annotations by enabling the `noImplicitAny` compiler option.
-Example (tsconfig.json):
-```json
-{
-  "compilerOptions": {
-    "noImplicitAny": true
+
+  ```json
+  {
+    "compilerOptions": {
+      "noImplicitAny": true
+    }
   }
-}
+  ```
+
+2.  **Strict Mode:**<Tag color="volcano">Safety</Tag> <br />
+    Enable TypeScripts strict mode (`strict` compiler option) to catch more
+    potential errors at compiletime. Enable it in your `tsconfig.json`
+
+    ```json
+    {
+      "compilerOptions": {
+        "strict": true
+      }
+    }
+    ```

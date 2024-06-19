@@ -69,7 +69,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Best practices',
+          label: 'Tech @ steam A',
         },
         {to: '/blog', label: 'Our Ways of working', position: 'left'},
         {

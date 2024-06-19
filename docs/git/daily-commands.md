@@ -1,64 +1,64 @@
 ---
-sidebar_position: 2
+sidebar_position : 2
 ---
 
 # Commands
 
 There are lot of things you can do with git, but only handfull of commands that we use in our daily basis, Those commands are mentioned below.
 
-1.  ### Initialize a Repository:
+1.  ### Initialize a Repository  
 
     ```bash
     git init
     ```
 
-2.  ### Clone a Repository:
+2.  ### Clone a Repository  
 
     ```bash
     git clone <repository-url>
     ```
 
-3.  ### Check Status:
+3.  ### Check Status  
 
     ```bash
     git status
     ```
 
-4.  ### Stage Changes:
+4.  ### Stage Changes  
     ```bash
     git add <file(s)>
     ```
-5.  ### Commit Changes:
+5.  ### Commit Changes  
     ```bash
     git commit -m "Commit message"
     ```
-6.  ### Push Changes:
+6.  ### Push Changes  
     ```bash
     git push origin <branch>
     ```
-7.  ### Pull Changes:
+7.  ### Pull Changes  
     ```bash
     git pull origin <branch>
     ```
-8.  ### Create a Branch:
+8.  ### Create a Branch  
 
         ```bash
         git checkout -b <branch-name>
         ```
 
-9.  ### Switch Branches:
+9.  ### Switch Branches  
     ```bash
     git checkout <branch-name>
     ```
-10. ### Merge Branches:
+10. ### Merge Branches  
     ```bash
     git merge <branch>
     ```
-11. ### View Commit History:
+11. ### View Commit History  
     ```bash
     git log
     ```
-12. ### Undo Changes:
+12. ### Undo Changes  
 
     ```bash
     git reset --hard HEAD~1   # Undo last commit and reset changes
@@ -66,18 +66,18 @@ There are lot of things you can do with git, but only handfull of commands that 
 
     ```
 
-13. ### View Differences:
+13. ### View Differences  
 
     ```bash
     git diff          # Show unstaged changes
     git diff --cached # Show staged changes
     ```
 
-14. ### Tag a Commit:
+14. ### Tag a Commit  
     ```bash
     git tag <tag-name>
     ```
-15. ### Fetch Tags:
+15. ### Fetch Tags  
 
     ```bash
     git fetch --tags
