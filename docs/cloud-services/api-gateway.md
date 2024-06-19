@@ -20,8 +20,3 @@ sidebar_position: 2
 - Enable API Gateway logging to CloudWatch Logs for monitoring and auditing API requests and responses.
 - Use API Gateway metrics and CloudWatch Alarms to monitor API usage, latency, and errors.
 
-:::tip My tip
-
-Use this awesome feature option
-
-:::
